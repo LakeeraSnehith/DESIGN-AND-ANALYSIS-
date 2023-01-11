@@ -1,15 +1,19 @@
-#include <stdio.h>
-#include <string.h>
-int main()
+#include<iostream>
+#include<string.h>
+using namespace std;
+int main ()
 {
-   char s[100];
-
-   printf("Enter a string to reverse\n");
-   gets(s);
-
-   strrev(s);
-
-   printf("Reverse of the string: %s\n", s);
-
-   return 0;
+    char str[50], temp;
+    int i, j;
+    cout << "Enter a string : ";
+    gets(str);
+    j = strlen(str) - 1;
+    for (i = 0; i < j; i++,j--)
+    {
+        temp = str[i];
+        str[i] = str[j];
+        str[j] = temp;
+    }
+    cout << "\nReverse string : " << str;
+    return 0;
 }
